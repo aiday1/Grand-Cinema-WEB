@@ -133,10 +133,10 @@ p {
   color: #fff;
   text-align: center;
 
-  background-color: #282936;
+  /* background-color: #282936;
   background-image: url("img/подснежник.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center; */
 }
 
 .welcome__heading {
@@ -148,9 +148,9 @@ p {
   text-transform: uppercase;
 }
 
-.welcome__links > * + * {
+/* .welcome__links > * + * {
   margin-left: 20px;
-}
+} */
 
 .link-primary {
   display: inline-block;
@@ -479,16 +479,7 @@ p {
     margin-bottom: 50px;
   }
 
-  .welcome__links a {
-    display: block;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
 
-  .welcome__links > * + * {
-    margin-top: 20px;
-  }
 
   body {
     font-size: 12px;
@@ -512,6 +503,12 @@ p {
 }
 
 
+
+.slider {
+  display: flex;
+  width: auto;
+  margin-top: 100px ;
+}
 
 
 
