@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korean doramas</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <h1>Создание нового товара</h1>
+    <!-- Создание формы -->
+    <form class="product-create-form" id="formCreate">
+        <div class="input-title">
+            <!-- Поле имя -->
+            <label for="title">Название товара</label>
+            <input type="text" name="title" placeholder="Имя">
+        </div>
+        <div class="input-image">
+            <!-- Поле url изображения -->
+            <label for="image">Изображение товара</label>
+            <input size="64" type="text" name="image" placeholder="url товара">
+        </div>
+        <div class="input-catogory">
+            <label for="catogory">Категория товара</label>
+            <!-- Список категорий товара -->
+            <select name="category">
+                <option selected value="men's clothing">men's clothing</option>
+                <option value="jewelery">jewelery</option>
+                <option value="electronics">electronics</option>
+                <option value="women's clothing">women's clothing</option>
+            </select>
+        </div>
+        <div class="input-price">
+            <!-- Цена товара -->
+            <label for="price">Цена товара</label>
+            <input type="number" name="price" placeholder="0">
+        </div>
+        <input type="submit" value="Создать товар">
+    </form>
+    
+    <div class="cards-wrapper">
+        <div class="card" data-id="1">
+          <img src="./img/mladshiy-syn-semi-cheboley14.jpg" alt="icon">
+          <h4>Младший сын семьи чеболей</h4>
+          <p>Главный герой Юн Хён Ву верой и правдой проработал добрый десяток лет в конгломерате «Суньян» личным помощником главы семейства, управляющего компанией, — Джин Ян Чуля.</p>
+          <a href="#!" class="link">5$</a>
+        </div>
+        <div class="card">
+          <img src="./img/svyaz-soedinenie.jpg" alt="icon">
+          <h4>Связь / Соединение</h4>
+          <p>Ха Дон Су — необычный человек. Он является частью новой расы генетически модифицированных людей, представители которых именуются Коннектами.</p>
+          <a href="#!" class="link">4.99$</a>
+        </div>
+        <div class="card">
+          <img src="img/osen-v-moem-serdce.jpg" alt="icon">
+          <h4>Осень в моем сердце</h4>
+          <p>Дорама входит в цикл, посвященный бесконечной любви и связанный с временами года. </p>
+          <a href="#!" class="link">14.99$</a>
+        </div>
+        <div class="card">
+          <img src="./img/teper-my-rasstayomsya9.jpg" alt="icon">
+          <h4>Теперь мы расстаёмся</h4>
+          <p>Дорама поведает историю Ха Ëн Ын — гуру моды и руководительницы отдела дизайна ведущего бренда страны. С своим юным годам девушка успела добиться успеха, признания и известности.</p>
+          <a href="#!" class="link">7.99$</a>
+        </div>
+        <div class="card">
+          <img src="./img/alhimiya-dush31.jpg" alt="icon">
+          <h4>Алхимия душ</h4>
+          <p>Дорама поведает историю Чжан Ука — молодого наследника благородного семейства. За его появлением на свет кроется пугающая тайна, а по стране ходят слухи о истинной личности мужчины.</p>
+          <a href="#!" class="link">4$</a>
+        </div>
+        <div class="card">
+          <img src="./img/zvuki-volshebstva6.jpg" alt="icon">
+          <h4>Звуки волшебства</h4>
+          <p>Юн А И учится в старшей школе. Однако жизнь девушки далеко не так безоблачна, как может показаться на первый взгляд. </p>
+          <a href="#!" class="link">3$</a>
+        </div>
+        <div class="card">
+          <img src="./img/ya-znayu-no27.jpg" alt="icon">
+          <h4>Я знаю, но...</h4>
+          <p>Пак Чжэ Он — популярный студент университета «Хонгсо», который учится на кафедре скульптуры. О молодом человеке ходят упорные слухи, что он меняет девушек как перчатки и никогда в них не влюбляется.</p>
+          <a href="#!" class="link">6.50$</a>
+        </div>
+        <div class="card">
+          <img src="./img/primorskaya-derevnya-chachacha21.jpg" alt="icon">
+          <h4>Приморская деревня ЧаЧаЧа</h4>
+          <p>Главная героиня использует формулировку «ча-ча-ча» для обозначения автомобиля, поскольку слово «ча» на корейском языке имеет два значения: машина и чай. Помимо внешней красоты, Юн Хе Джин обладает обостренным чувством справедливости и гуманизма. </p>
+          <a href="#!" class="link">5$</a>
+        </div>
+        <div class="card">
+          <img src="./img/vo-imya-mesti.jpg" alt="icon">
+          <h4>Во имя мести</h4>
+          <p>Юн Джи У — молодая девушка, которая сталкивается лицом к лицу с ошеломляющей трагедией. В день ее рождения прямо на глазах героини убивают ее отца, Юн Дон Хуна. Однако вместо того, чтобы отчаяться и опустить руки, девушка принимает решение отомстить преступнику и совершить самосуд. </p>
+          <a href="#!" class="link">9.99$</a>
+        </div>
+        <div class="card">
+          <img src="./img/vlyublyonnost-korolya18.jpg" alt="icon">
+          <h4>Влюблённость</h4>
+          <p>Самой ненастной ночью в году супруга наследного принца производит на свет близнецов — мальчика и девочку. Однако весть не сулит ничего хорошего...</p>
+          <a href="#!" class="link">3.50$</a>
+        </div>
+        <div class="card">
+          <img src="./img/nashe-lyubimoe-leto7.jpg" alt="icon">
+          <h4>Наше любимое лето</h4>
+          <p> Чхве Ун и Ён Су были совершенно далекими по характеру и, казалось, не подходили друг другу, находясь в вечных спорах. Однако некоторое время спустя эти двое начали встречаться, но отношения закончились через пять лет.</p>
+          <a href="#!" class="link">6$</a>
+        </div>
+        <div class="card">
+          <img src="./img/skandal-evy5.jpg" alt="icon">
+          <h4>Скандал Евы</h4>
+          <p>Ли Ра Эль родилась с золотым билетом в руках. Её отец был обожаемой миллионами национальной знаменитостью, а мать — известной красавицей и идеальной хранительницей семейного очага.</p>
+          <a href="#!" class="link">11.50$</a>
+        </div>
+      </div>
+
+      <script>
+        let query = fetch("https://637eed1a5b1cc8d6f936c37d.mockapi.io/category/1/films")
+            .then(responce => responce.json())
+            .then(json => {
+              console.log(json);
+              json.forEach(element => {
+                
+              });
+            });
+      </script>
+      <script src="javascript/main.js"></script>
+      <script src="javascript/createPrduct.js"></script>
+</body>
+</html>

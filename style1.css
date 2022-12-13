@@ -1,0 +1,77 @@
+/* Общие стили */
+p {
+    color: #aaac9e;
+    line-height: 1.8;
+  }
+  /* ------------ ABOUT (WHAT WE DO) ------------ */
+
+.about {
+
+}
+
+.about .cards-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.about .card {
+  padding: 35px 15px 20px;
+  max-width: 300px;
+  border: 1px solid #DCEBF7;
+  border-radius: 5px;
+}
+
+.about .card img {
+  margin-bottom: 20px;
+
+  width: 94px;
+  height: 94px;
+  object-fit: contain;
+}
+
+.about .card h4 {
+  margin-bottom: 15px;
+
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  color: white;
+}
+
+
+/* ------------ ABOUT (WHAT WE DO) ------------ */
+.services {
+}
+
+.services .cards-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.services .card {
+  width: 45%;
+}
+
+.services .card img {
+  margin-bottom: 20px;
+}
+
+.services .card h4 {
+  margin-bottom: 20px;
+
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+}
+
+.services .link {
+  margin-top: 15px;
+}
+
+/* .cards-wrapper {
+    background-color: rgb(1, 2, 15);
+} */
