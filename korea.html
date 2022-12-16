@@ -6,41 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Korean doramas</title>
     <link rel="stylesheet" href="style1.css">
+    <!-- <a href="./kozina.html" class="link">Купить дораму:</a> -->
 </head>
 <body>
-  <h1>Создание нового товара</h1>
-    <!-- Создание формы -->
-    <form class="product-create-form" id="formCreate">
-        <div class="input-title">
-            <!-- Поле имя -->
-            <label for="title">Название товара</label>
-            <input type="text" name="title" placeholder="Имя">
-        </div>
-        <div class="input-image">
-            <!-- Поле url изображения -->
-            <label for="image">Изображение товара</label>
-            <input size="64" type="text" name="image" placeholder="url товара">
-        </div>
-        <div class="input-catogory">
-            <label for="catogory">Категория товара</label>
-            <!-- Список категорий товара -->
-            <select name="category">
-                <option selected value="men's clothing">men's clothing</option>
-                <option value="jewelery">jewelery</option>
-                <option value="electronics">electronics</option>
-                <option value="women's clothing">women's clothing</option>
-            </select>
-        </div>
-        <div class="input-price">
-            <!-- Цена товара -->
-            <label for="price">Цена товара</label>
-            <input type="number" name="price" placeholder="0">
-        </div>
-        <input type="submit" value="Создать товар">
-    </form>
-    
-    <div class="cards-wrapper">
-        <div class="card" data-id="1">
+  <!-- <h1 class="h1">Корзина <span>(1)</span></h1>
+  <h2 class="h2">Итого: <span class="price">1000</span>$</h2> -->
+      <div class="cards-wrapper">
+<!-- <h1 class="h1">Корзина <span>(1)</span></h1> -->
+        <!--<div class="card" data-id="1">
           <img src="./img/mladshiy-syn-semi-cheboley14.jpg" alt="icon">
           <h4>Младший сын семьи чеболей</h4>
           <p>Главный герой Юн Хён Ву верой и правдой проработал добрый десяток лет в конгломерате «Суньян» личным помощником главы семейства, управляющего компанией, — Джин Ян Чуля.</p>
@@ -65,18 +38,6 @@
           <a href="#!" class="link">7.99$</a>
         </div>
         <div class="card">
-          <img src="./img/alhimiya-dush31.jpg" alt="icon">
-          <h4>Алхимия душ</h4>
-          <p>Дорама поведает историю Чжан Ука — молодого наследника благородного семейства. За его появлением на свет кроется пугающая тайна, а по стране ходят слухи о истинной личности мужчины.</p>
-          <a href="#!" class="link">4$</a>
-        </div>
-        <div class="card">
-          <img src="./img/zvuki-volshebstva6.jpg" alt="icon">
-          <h4>Звуки волшебства</h4>
-          <p>Юн А И учится в старшей школе. Однако жизнь девушки далеко не так безоблачна, как может показаться на первый взгляд. </p>
-          <a href="#!" class="link">3$</a>
-        </div>
-        <div class="card">
           <img src="./img/ya-znayu-no27.jpg" alt="icon">
           <h4>Я знаю, но...</h4>
           <p>Пак Чжэ Он — популярный студент университета «Хонгсо», который учится на кафедре скульптуры. О молодом человеке ходят упорные слухи, что он меняет девушек как перчатки и никогда в них не влюбляется.</p>
@@ -95,36 +56,136 @@
           <a href="#!" class="link">9.99$</a>
         </div>
         <div class="card">
-          <img src="./img/vlyublyonnost-korolya18.jpg" alt="icon">
-          <h4>Влюблённость</h4>
-          <p>Самой ненастной ночью в году супруга наследного принца производит на свет близнецов — мальчика и девочку. Однако весть не сулит ничего хорошего...</p>
-          <a href="#!" class="link">3.50$</a>
-        </div>
-        <div class="card">
-          <img src="./img/nashe-lyubimoe-leto7.jpg" alt="icon">
-          <h4>Наше любимое лето</h4>
-          <p> Чхве Ун и Ён Су были совершенно далекими по характеру и, казалось, не подходили друг другу, находясь в вечных спорах. Однако некоторое время спустя эти двое начали встречаться, но отношения закончились через пять лет.</p>
-          <a href="#!" class="link">6$</a>
-        </div>
-        <div class="card">
           <img src="./img/skandal-evy5.jpg" alt="icon">
           <h4>Скандал Евы</h4>
           <p>Ли Ра Эль родилась с золотым билетом в руках. Её отец был обожаемой миллионами национальной знаменитостью, а мать — известной красавицей и идеальной хранительницей семейного очага.</p>
           <a href="#!" class="link">11.50$</a>
-        </div>
+        </div>-->
+        <!-- <h2 class="h2">Итого: <span class="price">1000</span>$</h2> -->
       </div>
 
       <script>
+        let goods = (localStorage.getItem('korzina'))? JSON.parse(localStorage.getItem('korzina')) : [];
+        console.log(goods);
+
         let query = fetch("https://637eed1a5b1cc8d6f936c37d.mockapi.io/category/1/films")
             .then(responce => responce.json())
             .then(json => {
               console.log(json);
               json.forEach(element => {
-                
-              });
+                let card = document.createElement('div');
+                card.classList.add('card')
+                card.dataset.id = element.id;
+                card.innerHTML = `
+                <h4>${element.name}</h4>
+                <img src="${element.img}" alt="icon">
+                <p>${element.discription}</p>
+                <a href="#!" class="link">${element.price}$</a>`;
+                document.querySelector('.cards-wrapper').append(card);
+              }); 
+              
+              document.querySelectorAll('.link').forEach(element => {
+                element.addEventListener('click',  function (elem){
+                  if (goods[element.closest('.card').dataset.id-1]) {
+                    goods[element.closest('.card').dataset.id - 1].count++;
+                  } else {
+                    goods[element.closest('.card').dataset.id - 1] = {
+                      id: element.closest('.card').dataset.id,
+                      price: element.closest('.card').querySelector('.link').innerText,
+                      name: element.closest('.card').querySelector('h4').innerText,
+                      count: 1
+                    };
+                  }
+                  localStorage.setItem('korzina', JSON.stringify(goods));
+                  console.log(goods)
+                });
+              })
+              
             });
+
+          
+        //     calc_sum();
+
+        //     console.log(goods);
+
+        //     function decrement(e) {
+        //     const btn = e.target.parentNode.parentElement.querySelector(
+        //       'button[data-action="decrement"]'
+        //     );
+        //     const target = btn.nextElementSibling;
+        //     let value = Number(target.value);
+        //     value--;
+        //     value = (value < 0)? 0: value;
+        //     target.value = value;
+        //   }
+      
+        //     function increment(e) {
+        //     const btn = e.target.parentNode.parentElement.querySelector(
+        //       'button[data-action="decrement"]'
+        //      );
+        //     const target = btn.nextElementSibling;
+        //     let value = Number(target.value);
+        //     value++;
+        //     target.value = value;
+        //   }
+      
+        //     const decrementButtons = document.querySelectorAll(
+        //       `button[data-action="decrement"]`
+        //     );
+      
+        //     const incrementButtons = document.querySelectorAll(
+        //       `button[data-action="increment"]`
+        //     );
+      
+        //     decrementButtons.forEach(btn => {
+        //       btn.addEventListener("click", decrement);
+        //     });
+      
+        //     incrementButtons.forEach(btn => {
+        //       btn.addEventListener("click", increment);
+        //      });
+
+        // let delete_card = document.querySelectorAll('.remove-icon img');
+
+        // function calc_sum() {
+        //   let sum = 0;
+        //   let length = 0;
+        //   goods.forEach(element => {
+        //     if (element) {
+        //       sum += element.price * element.count;
+        //       length++;
+        //     }
+        //   })
+        //   // console.log(price)
+        //   document.querySelector('.h1 span').innerHTML = '(' + length + ')';
+        //   document.querySelector('.price').innerHTML = sum;
+        // }
+
+        // delete_card.forEach(element => {
+        //   element.addEventListener('click', function () {
+        //     let parent = this.closest('.card');
+        //     console.log(parent.dataset.id);
+        //     goods[parent.dataset.id] = null;
+        //     localStorage.setItem('korzina', JSON.stringify(goods));
+        //     parent.parentNode.removeChild(parent);
+        //     calc_sum();
+        //   });
+        // })
+//         function total(){
+//     const cartWrapper = document.querySelector('.cart-wrapper');
+//     const cartItems = document.querySelectorAll('.cart-item');
+//     const totalPriceEl = document.querySelector('.price')
+//     let totalPrice = 0
+
+//     cartItems.forEach(function (item){
+//         const amount = item.querySelector('[.link]');
+//         const price = item.querySelector('.price__currency');
+//         const currentPrice = parseInt(amount.innerText) * parseInt(price.innerText);
+//         totalPrice += currentPrice
+//     })
+//     totalPriceEl.innerText = totalPrice
+
+// }
       </script>
-      <script src="javascript/main.js"></script>
-      <script src="javascript/createPrduct.js"></script>
 </body>
 </html>

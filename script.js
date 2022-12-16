@@ -27,7 +27,7 @@ tabsBtns.forEach((btn, index) => btn.addEventListener("click", () => {
 
 
 // Anchors
-const anchors = document.querySelectorAll(".header__nav a");
+const anchors = document.querySelectorAll(".header__nav .nav-a");
 
 anchors.forEach(anc => {
   anc.addEventListener("click", function(event) {
@@ -51,6 +51,6 @@ $('.slider').slick({
   fade: true,
   cssEase: 'linear',
   autoplay: true,
-  autoplaySpeed: 100,
+  autoplaySpeed: 1000,
 });
 
